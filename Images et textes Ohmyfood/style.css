@@ -1,32 +1,88 @@
+/*GENERAL*/
+body {
+    margin: 0%;
+}
 
-    div img {
-        display: flex;
-        margin: auto;
-        width: 162px;
-        padding-top: 14px;
-        padding-bottom: 10px;        
-    }
+h2,
+p {
+    font-family: 'Roboto', sans-serif;
+}
 
-    .bordershadow {
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-        z-index: 1;
-        position: relative;        
-    }
+.mainconteneur {
+    width: 100%;
+    height: 100%;
+}
 
-    .localisation {
-        display: flex;
-        background: #EAEAEA;
-        justify-content: center;
-        align-items: center;
-        gap: 17px;        
-    }
+/*HEADER*/
+div img {
+    display: flex;
+    margin: auto;
+    width: 162px;
+    padding-top: 14px;
+    padding-bottom: 10px;
+}
 
-    .mainconteneur {
-        width: 100%;
-        height: 100%;               
-    }
+.bordershadow {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    position: relative;
+}
 
-    body {
-        margin: 0%;
-    }
-    
+.localisation {
+    display: flex;
+    background: #EAEAEA;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+}
+
+/*RESERVER*/
+.alignsection {
+    text-align: center;
+}
+
+.buttonreserver {
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    border-radius: 25px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 13px 18.75px 13px 18.75px;
+    border: none;
+    color: white;
+}
+
+.centrebutton {
+    display: flex;
+    justify-content: center;
+}
+
+.backgroundbutton {
+    background: #F7F7F7;
+    padding: 39px 0px 57px 0px;
+}
+
+.localisation p {
+    font-weight: 600;
+}
+
+p h2 {
+    margin: 0%;
+}
+
+/*FONCTIONNEMENT*/
+.cards {
+    display: flex;  
+    background: #F7F7F7;
+    height: 72.38px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    margin: 26px 20px 24.92px 32.51px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;   
+}
+
+.textalign {
+    justify-content: center;
+}
+
+
