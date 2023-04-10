@@ -1,6 +1,5 @@
-body,
-h2 {
-  margin: auto;
+body {
+  font-family: "Roboto", sans-serif;
 }
 
 .headerbar {
@@ -9,21 +8,29 @@ h2 {
   justify-content: center;
   flex-direction: row;
 }
-
-.headerbar__logo {
+.headerbar .headerbar__logo {
   width: 162px;
   height: 30px;
   background: white;
   padding: 20px 0px 15px 0px;
 }
-
-#headerbar__shadow {
+.headerbar__shadow {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   position: relative;
 }
-
 .headerbar__location {
   background-color: #EAEAEA;
+  gap: 15px;
+  font-weight: bold;
+}
+
+.to-book-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 39.5px;
+  padding-bottom: 50px;
+  background-color: #F3F3F3;
 }
 
 .btn {
@@ -40,4 +47,57 @@ h2 {
 .btn__pink--shadow {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border: none;
+}
+
+h2 {
+  padding-left: 20px;
+}
+
+.margin-top-fonction {
+  margin-top: 35px;
+}
+
+.nav-barre {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: row;
+  height: 72.38px;
+  left: 32.51px;
+  top: 602.3px;
+  background: #F7F7F7;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.elipse {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  background: #9356DC;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+}
+
+i {
+  color: #9356DC;
+}
+
+img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.card {
+  background: white;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  height: 77px;
 }/*# sourceMappingURL=style.css.map */

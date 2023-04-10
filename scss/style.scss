@@ -1,45 +1,57 @@
 @import './_mixins';
-@import './_placeholders';
 @import './_variables';
 
-body,
-h2 {
-    margin: auto;
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
-//CENTRAGE DU HEADER
+//HEADER
 .headerbar {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+
+    .headerbar__logo {
+        width: 162px;
+        height: 30px;
+        background: white;
+        padding: 20px 0px 15px 0px;
+    }
+
+    &__shadow {
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+        position: relative;
+    }
+
+    &__location {
+        background-color: $gray-color;
+        gap: 15px;
+        font-weight: bold;
+    }
+
 }
 
-//LA TAILLE AVEC UN FOND BLANC ET UN PADDING POUR LE LOGO
-.headerbar__logo {
-    width: 162px;
-    height: 30px;
-    background: white;
-    padding: 20px 0px 15px 0px;
+//LE PARAGRAPHE
+.to-book-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 39.5px;
+    padding-bottom: 50px;
+    background-color: $gray-light;
 }
-//UNE OMBRE POUR LE HAUT DU BANDEAU
-#headerbar__shadow {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-    position: relative;
-}
-//UN FOND GRIS POUR LA BARRE DE LOCATION
-.headerbar__location {
-    background-color: #EAEAEA;
-}
+
 //LE BOUTON
 .btn {
     width: 218px;
     height: 50px;
     color: white;
 }
+
 //LA COULEUR DU BOUTON
 .btn__pink {
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    background: $pink-color-gradient;
     border-radius: 25px;
 }
 
@@ -47,4 +59,61 @@ h2 {
 .btn__pink--shadow {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border: none;
+}
+
+//NAV
+
+h2 {
+    padding-left: 20px;
+}
+
+.margin-top-fonction {
+    margin-top: 35px;
+}
+
+.nav-barre {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.nav-item {
+    display: flex;
+    flex-direction: row;
+    height: 72.38px;
+    left: 32.51px;
+    top: 602.3px;
+    background: #F7F7F7;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+
+.elipse {    
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background: #9356DC;
+    border-radius: 50%;
+    text-align: center;
+    color: white;    
+}
+
+i {
+    color:  #9356DC;
+}
+
+img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card {
+    background: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    height: 77px;
 }
