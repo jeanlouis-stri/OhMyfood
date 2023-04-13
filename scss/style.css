@@ -76,8 +76,7 @@ h2 {
   gap: 15px;
   margin-bottom: 30px;
 }
-
-.elipse {
+.nav-item__elipse {
   position: relative;
   width: 24px;
   height: 24px;
@@ -87,17 +86,67 @@ h2 {
   color: white;
 }
 
-i {
+nav i {
   color: #9356DC;
 }
 
-img {
+.aligncard img {
+  height: 140px;
   width: 100%;
-  border-radius: 15px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.aligncard {
+  background: #F7F7F7;
+  padding: 20px;
 }
 
 .card {
-  background: white;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  height: 77px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background: #FFFFFF;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.card__title {
+  line-height: 30%;
+  padding-left: 13px;
+}
+
+.card__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.footer {
+  background: #353535;
+  height: 186px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 22px;
+}
+
+.footer__logo {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+  width: 120px;
+  padding-top: 22px;
+  padding-left: 24px;
+  padding-bottom: 16px;
+}
+
+.footer__icon {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 24px;
+  gap: 12px;
+  line-height: 10%;
+}
+
+.footer__icon-- i {
+  font-size: 12px;
 }/*# sourceMappingURL=style.css.map */

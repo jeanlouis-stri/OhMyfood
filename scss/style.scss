@@ -70,7 +70,7 @@ h2 {
 .margin-top-fonction {
     margin-top: 35px;
 }
-
+//CECI EST LA NAVIGATION 
 .nav-barre {
     display: flex;
     flex-direction: column;
@@ -90,30 +90,79 @@ h2 {
     justify-content: center;
     gap: 15px;
     margin-bottom: 30px;
+
+    &__elipse {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        background: #9356DC;
+        border-radius: 50%;
+        text-align: center;
+        color: white;
+    }
 }
 
-
-.elipse {    
-    position: relative;
-    width: 24px;
-    height: 24px;
-    background: #9356DC;
-    border-radius: 50%;
-    text-align: center;
-    color: white;    
+nav i {
+    color: #9356DC;
 }
 
-i {
-    color:  #9356DC;
-}
-
-img {
+.aligncard img {
+    height: 140px;
     width: 100%;
-    border-radius: 15px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.aligncard {
+    background: $gray-wite;
+    padding: 20px;
 }
 
 .card {
-    background: white;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    height: 77px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background: #FFFFFF;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.card__title {
+    line-height: 30%;
+    padding-left: 13px;
+}
+
+.card__img {
+    object-fit: cover;    
+}
+//CECI EST LE FOOTER AVEC LE FOND EN NOIR AVEC LA HAUTEUR DU FOND + LES DIFFERENTS PADDING
+.footer {
+    background: #353535;
+    height: 186px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 22px;
+}
+
+//ICI J'AI M'Y UN FILTRE POUR POUVOIR METTRE LE LOGO DU FOOTER EN BLANC
+.footer__logo {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    width: 120px;
+    padding-top: 22px;
+    padding-left: 24px;
+    padding-bottom: 16px;
+}
+//CECI EST LA COULEUR DU TEXTE, DES ICONES QUI SE TROUVE DANS LE FOOTER MAIS EGALEMENT LA MISE A DISPOSITION DU CONTENU DU FOOTER
+.footer__icon {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 24px;
+    gap: 12px;
+    line-height: 10%;
+}
+//CECI EST LA TAILLE DE L'ICONE
+.footer__icon-- i {
+    font-size: 12px;
 }
