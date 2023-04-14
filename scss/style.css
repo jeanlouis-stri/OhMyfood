@@ -2,13 +2,17 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+span h2 {
+  padding-left: 20px;
+}
+
 .headerbar {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
 }
-.headerbar .headerbar__logo {
+.headerbar__logo {
   width: 162px;
   height: 30px;
   background: white;
@@ -28,8 +32,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 39.5px;
-  padding-bottom: 50px;
+  padding: 39.5px 0 50px;
   background-color: #F3F3F3;
 }
 
@@ -38,19 +41,13 @@ body {
   height: 50px;
   color: white;
 }
-
 .btn__pink {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   border-radius: 25px;
 }
-
 .btn__pink--shadow {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border: none;
-}
-
-h2 {
-  padding-left: 20px;
 }
 
 .margin-top-fonction {
@@ -60,23 +57,21 @@ h2 {
 .nav-barre {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  justify-content: center;
 }
-
-.nav-item {
+.nav-barre .nav-item {
   display: flex;
   flex-direction: row;
   height: 72.38px;
-  left: 32.51px;
-  top: 602.3px;
   background: #F7F7F7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   align-items: center;
-  justify-content: center;
   gap: 15px;
   margin-bottom: 30px;
 }
-.nav-item__elipse {
+.nav-barre .nav-item__elipse {
   position: relative;
   width: 24px;
   height: 24px;
@@ -87,18 +82,26 @@ h2 {
 }
 
 nav i {
+  color: #7E7E7E;
+}
+
+nav i:hover {
   color: #9356DC;
 }
 
 .aligncard img {
   height: 140px;
   width: 100%;
-  border-radius: 15px 15px 0px 0px;
+  border-radius: 15px 15px 0 0;
 }
 
 .aligncard {
   background: #F7F7F7;
   padding: 20px;
+}
+.aligncard h2 {
+  padding-left: 0;
+  padding-bottom: 20px;
 }
 
 .card {
@@ -109,12 +112,10 @@ nav i {
   height: 200px;
   margin-bottom: 20px;
 }
-
 .card__title {
   line-height: 30%;
   padding-left: 13px;
 }
-
 .card__img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -127,7 +128,6 @@ nav i {
   flex-direction: column;
   padding-bottom: 22px;
 }
-
 .footer__logo {
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
   width: 120px;

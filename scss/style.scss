@@ -1,8 +1,13 @@
 @import './_mixins';
 @import './_variables';
 
+//GENERAL
 body {
     font-family: 'Roboto', sans-serif;
+}
+
+span h2 {
+    padding-left: 20px;
 }
 
 //HEADER
@@ -12,7 +17,7 @@ body {
     justify-content: center;
     flex-direction: row;
 
-    .headerbar__logo {
+    &__logo {
         width: 162px;
         height: 30px;
         background: white;
@@ -29,7 +34,6 @@ body {
         gap: 15px;
         font-weight: bold;
     }
-
 }
 
 //LE PARAGRAPHE
@@ -37,8 +41,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 39.5px;
-    padding-bottom: 50px;
+    padding: 39.5px 0 50px;
     background-color: $gray-light;
 }
 
@@ -47,74 +50,77 @@ body {
     width: 218px;
     height: 50px;
     color: white;
-}
 
-//LA COULEUR DU BOUTON
-.btn__pink {
-    background: $pink-color-gradient;
-    border-radius: 25px;
-}
+    &__pink {
+        background: $pink-color-gradient;
+        border-radius: 25px;
 
-//UNE OMBRE AUTOUR DU BOUTON TOUT EN ENLEVANT LLA BORDURE DU BACKGROUND
-.btn__pink--shadow {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    border: none;
+        &--shadow {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+            border: none;
+        }
+    }
 }
 
 //NAV
-
-h2 {
-    padding-left: 20px;
-}
-
 .margin-top-fonction {
     margin-top: 35px;
 }
-//CECI EST LA NAVIGATION 
+
+//NAVIGATION 
 .nav-barre {
     display: flex;
     flex-direction: column;
-}
-
-
-.nav-item {
-    display: flex;
-    flex-direction: row;
-    height: 72.38px;
-    left: 32.51px;
-    top: 602.3px;
-    background: #F7F7F7;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-    border-radius: 20px;
-    align-items: center;
+    width: 100%;
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
 
-    &__elipse {
-        position: relative;
-        width: 24px;
-        height: 24px;
-        background: #9356DC;
-        border-radius: 50%;
-        text-align: center;
-        color: white;
+    .nav-item {
+        display: flex;
+        flex-direction: row;
+        height: 72.38px;
+        background: #F7F7F7;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 30px;
+
+        &__elipse {
+            position: relative;
+            width: 24px;
+            height: 24px;
+            background: #9356DC;
+            border-radius: 50%;
+            text-align: center;
+            color: white;
+        }
     }
 }
 
 nav i {
+    color: #7E7E7E;
+}
+
+nav i:hover {
     color: #9356DC;
 }
 
+
+//CARD
 .aligncard img {
     height: 140px;
     width: 100%;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 15px 15px 0 0;
 }
 
 .aligncard {
     background: $gray-wite;
     padding: 20px;
+
+    h2 {
+        padding-left: 0;
+        padding-bottom: 20px;
+    }
 }
 
 .card {
@@ -124,16 +130,17 @@ nav i {
     background: #FFFFFF;
     height: 200px;
     margin-bottom: 20px;
+
+    &__title {
+        line-height: 30%;
+        padding-left: 13px;
+    }
+
+    &__img {
+        object-fit: cover;
+    }
 }
 
-.card__title {
-    line-height: 30%;
-    padding-left: 13px;
-}
-
-.card__img {
-    object-fit: cover;    
-}
 //CECI EST LE FOOTER AVEC LE FOND EN NOIR AVEC LA HAUTEUR DU FOND + LES DIFFERENTS PADDING
 .footer {
     background: #353535;
@@ -141,16 +148,16 @@ nav i {
     display: flex;
     flex-direction: column;
     padding-bottom: 22px;
+
+    &__logo {
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+        width: 120px;
+        padding-top: 22px;
+        padding-left: 24px;
+        padding-bottom: 16px;
+    }
 }
 
-//ICI J'AI M'Y UN FILTRE POUR POUVOIR METTRE LE LOGO DU FOOTER EN BLANC
-.footer__logo {
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
-    width: 120px;
-    padding-top: 22px;
-    padding-left: 24px;
-    padding-bottom: 16px;
-}
 //CECI EST LA COULEUR DU TEXTE, DES ICONES QUI SE TROUVE DANS LE FOOTER MAIS EGALEMENT LA MISE A DISPOSITION DU CONTENU DU FOOTER
 .footer__icon {
     display: flex;
@@ -162,6 +169,7 @@ nav i {
     gap: 12px;
     line-height: 10%;
 }
+
 //CECI EST LA TAILLE DE L'ICONE
 .footer__icon-- i {
     font-size: 12px;
