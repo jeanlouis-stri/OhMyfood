@@ -1,9 +1,31 @@
+@charset "UTF-8";
 body {
   font-family: "Roboto", sans-serif;
+  margin: 0%;
 }
 
 span h2 {
   padding-left: 20px;
+}
+
+nav i {
+  color: #7E7E7E;
+}
+
+nav i:hover {
+  color: #9356DC;
+}
+
+.footer__icon-- i {
+  font-size: 12px;
+}
+
+.imghead {
+  position: absolute;
+  width: 100%;
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .headerbar {
@@ -26,6 +48,25 @@ span h2 {
   background-color: #EAEAEA;
   gap: 15px;
   font-weight: bold;
+}
+
+.header__back {
+  color: black;
+  font-size: 25px;
+}
+
+.headerbar-secondpage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerbar-secondpage__icon {
+  margin-right: 10px; /* Ajoute un espace entre l'icône et le logo */
+}
+
+.headerbar-secondpage__logo {
+  flex-shrink: 0; /* Empêche le logo de se rétrécir */
 }
 
 .to-book-center {
@@ -57,8 +98,9 @@ span h2 {
 .nav-barre {
   display: flex;
   flex-direction: column;
-  width: 100%;
   justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 .nav-barre .nav-item {
   display: flex;
@@ -70,23 +112,15 @@ span h2 {
   align-items: center;
   gap: 15px;
   margin-bottom: 30px;
+  width: 322.49px;
 }
 .nav-barre .nav-item__elipse {
-  position: relative;
   width: 24px;
   height: 24px;
   background: #9356DC;
   border-radius: 50%;
   text-align: center;
   color: white;
-}
-
-nav i {
-  color: #7E7E7E;
-}
-
-nav i:hover {
-  color: #9356DC;
 }
 
 .aligncard img {
@@ -109,16 +143,20 @@ nav i:hover {
   flex-direction: column;
   border-radius: 15px;
   background: #FFFFFF;
-  height: 200px;
   margin-bottom: 20px;
 }
 .card__title {
-  line-height: 30%;
+  line-height: 10%;
   padding-left: 13px;
 }
 .card__img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+.card__icon {
+  display: flex;
+  align-items: center;
+  gap: 100px;
 }
 
 .footer {
@@ -135,7 +173,6 @@ nav i:hover {
   padding-left: 24px;
   padding-bottom: 16px;
 }
-
 .footer__icon {
   display: flex;
   flex-direction: row;
@@ -145,8 +182,4 @@ nav i:hover {
   padding-left: 24px;
   gap: 12px;
   line-height: 10%;
-}
-
-.footer__icon-- i {
-  font-size: 12px;
 }/*# sourceMappingURL=style.css.map */
