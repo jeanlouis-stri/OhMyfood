@@ -25,10 +25,47 @@ nav i:hover {
 }
 
 .imghead {
-    position: absolute;
     width: 100%;
     height: 275px;
     object-fit: cover;
+}
+
+.nav_size--p {
+    font-size: 15.04px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.title__h2 {
+    font-family: 'Shrikhand', cursive;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 41px;
+    padding-left: 17px;
+}
+
+.title__h3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+.title--line {
+    border-bottom: 3px solid #99E2D0;
+    width: 40px;
+    padding-bottom: 5px;
+    margin-left: 13px;
+}
+
+.btn:hover {
+    transform: scale(1.2);
 }
 
 //HEADER
@@ -57,24 +94,42 @@ nav i:hover {
     }
 }
 
-.header__back {
+
+//HEADER DE LA DEUXIEME PAGE 
+.headerbar-secondpage {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 22%;
+
+    &__icon {
+        margin-right: 10px;
+        /* Ajoute un espace entre l'icône et le logo */
+    }
+
+    &__logo {
+        flex-shrink: 0;
+
+        /* Empêche le logo de se rétrécir */
+
+    }
+}
+
+//CECI EST LICONE BACK POUR REVENIR A LA PAGE PRECEDENTE
+.header__iconback {
     color: black;
     font-size: 25px;
 }
 
-.headerbar-secondpage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+//MAINCONTAINERSECONDPAGE
+.maincontainersecondpage {
+    background: $gray-wite;
+    border-radius: 30PX;
+    top: 283px;
+    position: absolute;
+    width: 100%;
+}
 
-  .headerbar-secondpage__icon {
-    margin-right: 10px; /* Ajoute un espace entre l'icône et le logo */
-  }
-  
-  .headerbar-secondpage__logo {
-    flex-shrink: 0; /* Empêche le logo de se rétrécir */
-  }
 
 //LE PARAGRAPHE
 .to-book-center {
@@ -101,6 +156,15 @@ nav i:hover {
         }
     }
 }
+
+.btn__secondpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
 
 //NAV
 .margin-top-fonction {
@@ -136,6 +200,37 @@ nav i:hover {
             color: white;
         }
     }
+}
+
+.nav-item__titlecard {
+    padding-left: 15px;
+}
+
+.nav-item__secondpage {
+    height: 72.38px;
+    background: #F7F7F7;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    width: 322.49px;
+    line-height: 20%;
+}
+
+
+.nav-item__numberweight {
+    display: flex;
+    font-weight: 700;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 16px;
+}
+
+.maincontainer p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15.0431px;
+    line-height: 18px;
 }
 
 //CARD
@@ -174,8 +269,18 @@ nav i:hover {
     &__icon {
         display: flex;
         align-items: center;
-        gap: 100px;
+        justify-content: space-between;
+        padding-right: 25px;
+        
     }
+}
+
+.card__icon-- {
+    font-size: 20px;
+}
+
+.card__icon--:checked {
+    background: $pink-color-gradient;
 }
 
 //CECI EST LE FOOTER AVEC LE FOND EN NOIR AVEC LA HAUTEUR DU FOND + LES DIFFERENTS PADDING
