@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Roboto", sans-serif;
   margin: 0%;
@@ -310,6 +311,36 @@ a {
   padding-left: 24px;
   gap: 12px;
   line-height: 10%;
+}
+
+.icon__absolute {
+  position: relative;
+}
+
+.card__icon__h2 {
+  display: flex;
+  align-items: center; /* Pour aligner les éléments verticalement */
+}
+
+.card__icon__h2 h2 {
+  margin-right: 10px; /* Pour ajouter un espacement entre le titre et l'icône */
+}
+
+.card__icon__h2 i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin-right: -30px;
+}
+
+.icon__heartfull {
+  opacity: 0;
+}
+
+.icon__heartfull:hover {
+  opacity: 1;
+  color: #ff79da;
 }
 
 @media (min-width: 800px) {
