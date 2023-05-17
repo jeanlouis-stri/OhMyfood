@@ -1,16 +1,32 @@
-//COULEURBASDEPAGE//
-$white-color: #FFFFFF;
+//COULEUR VERT DES ANIMATIONS CHECK ET DES BORDURE BOTTOM (ENTREE,PLATS,DESSERTS) ET DES CARDS NEWS
+$color_green: #99E2D0;
 
-$gray-color: #EAEAEA;
+//DEGRADER DE COULEUR DU BOUTON
+$button_pink: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 
-$gray-light: #F3F3F3;
+//COULEUR GRIS DU FOND DES PLATS CARD FONCTIONNEMENT,AUTOUR DU BOUTON EXPLER ET EGALEMENT AUTOUR DU COM DES MENUS DANS LACCUEIL ET DU FOND DES AUTRES PAGES
+$gray_menuhome_second_page: #F7F7F7;
 
-$gray-wite: #F7F7F7;
+//COULEUR GRIS DU FOND AUTOUR DE LA LOCALISATION A L'ACCUEIL
+$gray-localisation: #EAEAEA;
 
-$weight: bold;
+//COULEUR PRINCIPALE DU SITE
+$color_body: #FFFFFF;
 
-$green: #99E2D0;
+//COULEUR DU TEXTE NOUVEAU
+$color_text_new: #008766;
 
+//COULEUR NOIR
+$color_black: black;
 
-//DEGRADER DE COULEUR
-$pink-color-gradient: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+//COULEUR BLANC
+$color_white: white;
+
+//COULEUR DE FOND DE L'ANIMATION DU COEUR 
+$color_animation_heart: #FF79DA;
+
+//COULEUR DU LOADER ET DES ICONES SE TROUVANT DANS L'ACCUEIL
+$color_loader_and_icon_home: #7e7e7e;
+
+//COULEUR DE FOND DU FOOTER 
+$color_font_footer: #353535;

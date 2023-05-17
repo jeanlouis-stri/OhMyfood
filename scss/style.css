@@ -27,6 +27,17 @@ body {
   margin: 0%;
 }
 
+.main_body {
+  border-radius: 30px 30px 0 0;
+  background: #F7F7F7;
+}
+
+.maincontainersecondpage {
+  position: absolute;
+  top: 283px;
+  width: 100%;
+}
+
 .loader {
   position: fixed;
   top: 0;
@@ -39,6 +50,11 @@ body {
   justify-content: center;
   align-items: center;
   pointer-events: none;
+  opacity: 1;
+  animation-name: hide-loader;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
 }
 
 .spinner:after {
@@ -53,14 +69,6 @@ body {
   animation: spin 1.2s linear infinite;
 }
 
-.loader {
-  opacity: 1;
-  animation-name: hide-loader;
-  animation-duration: 1s;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-}
-
 span h2 {
   padding-left: 20px;
 }
@@ -71,10 +79,6 @@ nav i {
 
 nav i:hover {
   color: #9356dc;
-}
-
-.footer__icon-- i {
-  font-size: 12px;
 }
 
 .imghead {
@@ -111,7 +115,7 @@ a {
 }
 
 .title--line {
-  border-bottom: 3px solid #99e2d0;
+  border-bottom: 3px solid #99E2D0;
   width: 40px;
   padding-bottom: 5px;
 }
@@ -119,26 +123,23 @@ a {
 .header {
   padding: 1rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
-  z-index: 1000;
+  z-index: 1;
 }
-
-.header--withBackArrow {
+.header__withBackArrow {
   position: relative;
 }
-
 .header__arrow {
   position: absolute;
   left: 2rem;
   width: 2rem;
   top: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   transform: translateY(-50%);
   font-size: 1.2rem;
-  color: #000;
+  color: black;
 }
-
 .header__logo {
   font-family: Shrikhand, "cursive";
   margin: 0;
@@ -147,30 +148,18 @@ a {
 
 .location_barre {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   padding: 1.25rem 1rem;
-  background-color: #f3f3f3;
+  background-color: #EAEAEA;
   font-size: 1.2rem;
   position: relative;
 }
-
-.location_margin {
+.location_barre .location_margin {
   margin-right: 1rem;
 }
-
-.location_weight {
+.location_barre .location_weight {
   font-weight: 700;
-}
-
-.maincontainersecondpage {
-  position: absolute;
-  top: 283px;
-  width: 100%;
-}
-
-.main_body {
-  border-radius: 30px 30px 0 0;
-  background: #F7F7F7;
 }
 
 .to-book-center {
@@ -178,15 +167,13 @@ a {
   flex-direction: column;
   align-items: center;
   padding: 30px;
-  background-color: #fafafa;
+  background-color: #F7F7F7;
   text-align: center;
 }
-
-.to-book-margin {
+.to-book-center .to_book-margin {
   margin: 1.5rem 0;
 }
-
-.to-book-padding {
+.to-book-center .to-book-padding {
   margin-bottom: 30px;
 }
 
@@ -198,6 +185,10 @@ a {
   transition-property: transform;
   transition-duration: 150ms;
 }
+.btn:hover {
+  transform: scale(1.15);
+  opacity: 0.8;
+}
 .btn__pink {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   border-radius: 25px;
@@ -205,11 +196,6 @@ a {
 .btn__pink--shadow {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border: none;
-}
-
-.btn:hover {
-  transform: scale(1.15);
-  opacity: 0.8;
 }
 
 .btn__secondpage {
@@ -220,18 +206,14 @@ a {
   padding-bottom: 40px;
 }
 
-.margin-top-fonction {
-  margin-top: 35px;
-}
-
-.nav-barre {
+.nav__barre {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
 }
-.nav-barre .nav-item {
+.nav__barre .nav__item {
   display: flex;
   flex-direction: row;
   height: 72.38px;
@@ -244,7 +226,10 @@ a {
   width: 85%;
   cursor: pointer;
 }
-.nav-barre .nav-item__elipse {
+.nav__barre .nav__item__padding {
+  padding-left: 15px;
+}
+.nav__barre .nav__item__elipse {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -258,18 +243,14 @@ a {
   color: white;
 }
 
-.nav-item__titlecard {
-  padding-left: 15px;
-}
-
 .nav__green {
   background: #99E2D0;
   border-radius: 0 15px 15px 0;
   height: 72.38px;
   width: 0%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   z-index: 2;
   transition: transform 0.3s ease-in-out, width 0.3s ease-in-out, opacity 0.3s ease-in-out;
   opacity: 0;
@@ -278,8 +259,8 @@ a {
 
 .align_icon_check {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .background_check {
@@ -310,6 +291,7 @@ a {
 
 .animated__card:hover .nav__green {
   display: flex;
+  flex-direction: row;
   width: 59px;
   opacity: 100%;
 }
@@ -318,12 +300,12 @@ a {
   animation: rotate;
 }
 
-.animated__card:hover .nav-item__secondpage {
+.animated__card:hover .nav__item__secondpage {
   width: 60%;
   border-radius: 15px 0 0 15px;
 }
 
-.nav-item__secondpage {
+.nav__item__secondpage {
   height: 72.38px;
   background: #f7f7f7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -337,10 +319,10 @@ a {
   animation: show_check 0.2s;
 }
 
-.nav-item__numberweight {
+.nav__item__numberweight {
   display: flex;
-  font-weight: 700;
   flex-direction: row;
+  font-weight: 700;
   justify-content: flex-end;
   padding-right: 16px;
 }
@@ -360,7 +342,6 @@ a {
 }
 
 .card__icon__h2 {
-  flex-direction: row;
   padding-right: 50px;
 }
 
@@ -398,6 +379,7 @@ a {
 }
 .card__icon {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
@@ -433,6 +415,9 @@ a {
   padding-left: 24px;
   gap: 12px;
   line-height: 10%;
+}
+.footer__icon-- i {
+  font-size: 12px;
 }
 
 footer p {
@@ -501,7 +486,7 @@ footer p {
 }
 
 @media (min-width: 768px) {
-  .nav-barre {
+  .nav__barre {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -509,17 +494,19 @@ footer p {
     flex-wrap: nowrap;
     gap: 1.5%;
   }
-  .nav-barre .nav-item {
+  .nav__barre .nav__item {
     gap: 13%;
     width: 31%;
   }
-  .nav_barre_secondpage {
+  .nav__barre__secondpage {
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
   }
   .card__icon__h2 {
-    display: flex;
     justify-content: center;
+    display: flex;
+    flex-direction: row;
   }
   .card {
     width: 46%;
@@ -549,7 +536,7 @@ footer p {
   span h2 {
     padding: 0;
   }
-  .nav_cards {
+  .nav__cards {
     display: flex;
     flex-direction: column;
     padding-right: 10%;
@@ -558,6 +545,7 @@ footer p {
   .main_body {
     width: 75%;
     margin: auto;
+    background-color: #F7F7F7;
   }
   .footer {
     display: flex;
@@ -569,6 +557,9 @@ footer p {
   .footer__logo {
     padding-right: 40px;
   }
+  .footer__icon {
+    line-height: normal;
+  }
   .order__logo {
     order: 5;
     gap: 20px;
@@ -576,11 +567,8 @@ footer p {
   .maincontainersecondpage {
     top: 325px;
   }
-  .nav-item__secondpage {
+  .nav__item__secondpage {
     width: 65%;
-  }
-  .footer__icon {
-    line-height: normal;
   }
   .animated__card {
     width: 60%;

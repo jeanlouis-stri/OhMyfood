@@ -1,0 +1,13 @@
+@mixin flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//DEFINIS SI CEST EN ROW OU EN COLONNE
+@mixin flex($direction)
+{
+    display: flex;
+    flex-direction: $direction;    
+}
+
