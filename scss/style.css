@@ -29,13 +29,19 @@ body {
 
 .main_body {
   border-radius: 30px 30px 0 0;
-  background: #F7F7F7;
+  background: #f7f7f7;
 }
 
 .maincontainersecondpage {
   position: absolute;
   top: 283px;
   width: 100%;
+}
+
+.slide {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .loader {
@@ -115,7 +121,7 @@ a {
 }
 
 .title--line {
-  border-bottom: 3px solid #99E2D0;
+  border-bottom: 3px solid #99e2d0;
   width: 40px;
   padding-bottom: 5px;
 }
@@ -151,7 +157,7 @@ a {
   flex-direction: row;
   justify-content: center;
   padding: 1.25rem 1rem;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   font-size: 1.2rem;
   position: relative;
 }
@@ -167,7 +173,7 @@ a {
   flex-direction: column;
   align-items: center;
   padding: 30px;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   text-align: center;
 }
 .to-book-center .to_book-margin {
@@ -244,7 +250,7 @@ a {
 }
 
 .nav__green {
-  background: #99E2D0;
+  background: #99e2d0;
   border-radius: 0 15px 15px 0;
   height: 72.38px;
   width: 0%;
@@ -269,7 +275,7 @@ a {
   width: 20px;
   height: 20px;
   text-align: center;
-  color: #99E2D0;
+  color: #99e2d0;
   font-weight: bold;
   transition: transform 0.3s ease-in-out;
 }
@@ -279,7 +285,7 @@ a {
 }
 
 .fa-check {
-  color: #99E2D0;
+  color: #99e2d0;
 }
 
 .animated__card {
@@ -293,7 +299,7 @@ a {
   display: flex;
   flex-direction: row;
   width: 59px;
-  opacity: 100%;
+  opacity: 1;
 }
 
 .nav__green .background_check:hover {
@@ -312,7 +318,7 @@ a {
   border-radius: 15px;
   margin-bottom: 30px;
   width: 90%;
-  line-height: 20%;
+  line-height: 0.5;
   cursor: pointer;
   transition: width 0.2s;
   flex: 1;
@@ -352,8 +358,8 @@ a {
 }
 
 .aligncard {
-  background: #F7F7F7;
-  padding: 20px;
+  background: #f7f7f7;
+  padding: 3vw;
 }
 .aligncard h2 {
   padding-left: 0;
@@ -424,13 +430,18 @@ footer p {
   cursor: pointer;
 }
 
-.icon__absolute {
-  position: relative;
-}
-
 .card__icon__h2 h2 {
   margin-right: 2rem;
   /* Pour ajouter un espacement entre le titre et l'icône */
+}
+
+.card__icon__h2 i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin-right: -30px;
+  cursor: pointer;
 }
 
 .icon__absolute {
@@ -456,25 +467,16 @@ footer p {
   opacity: 1;
 }
 
-.card__icon__h2 i {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  margin-right: -30px;
-  cursor: pointer;
-}
-
 .icon__heartfull {
   opacity: 0;
-  color: #FF79DA;
+  color: #ff79da;
 }
 
 .background__new {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   /* Couleur de fond du background */
   color: #008766;
   /* Couleur du texte */
@@ -486,6 +488,13 @@ footer p {
 }
 
 @media (min-width: 768px) {
+  .maincontainersecondpage {
+    top: 325px;
+  }
+  .main_body {
+    width: 75%;
+    margin: auto;
+  }
   .nav__barre {
     display: flex;
     flex-direction: row;
@@ -495,13 +504,21 @@ footer p {
     gap: 1.5%;
   }
   .nav__barre .nav__item {
-    gap: 13%;
-    width: 31%;
+    width: 30%;
+  }
+  .nav__cards {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10%;
+    padding-left: 10%;
   }
   .nav__barre__secondpage {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+  }
+  .nav__item__secondpage {
+    width: 65%;
   }
   .card__icon__h2 {
     justify-content: center;
@@ -511,6 +528,10 @@ footer p {
   .card {
     width: 46%;
     margin-bottom: 3%;
+  }
+  .cards {
+    padding-right: 10%;
+    padding-left: 10%;
   }
   .aligncard {
     display: flex;
@@ -529,23 +550,8 @@ footer p {
   .align__img {
     height: 200px;
   }
-  .cards {
-    padding-right: 10%;
-    padding-left: 10%;
-  }
   span h2 {
     padding: 0;
-  }
-  .nav__cards {
-    display: flex;
-    flex-direction: column;
-    padding-right: 10%;
-    padding-left: 10%;
-  }
-  .main_body {
-    width: 75%;
-    margin: auto;
-    background-color: #F7F7F7;
   }
   .footer {
     display: flex;
@@ -563,12 +569,6 @@ footer p {
   .order__logo {
     order: 5;
     gap: 20px;
-  }
-  .maincontainersecondpage {
-    top: 325px;
-  }
-  .nav__item__secondpage {
-    width: 65%;
   }
   .animated__card {
     width: 60%;

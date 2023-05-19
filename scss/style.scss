@@ -20,6 +20,11 @@ body {
   width: 100%;
 }
 
+.slide {
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
 //POSITION DU LOADER
 .loader {
   position: fixed;
@@ -38,7 +43,7 @@ body {
   animation-fill-mode: forwards;
 }
 
-//CREATION LOGOLOADER 
+//CREATION LOGOLOADER
 .spinner:after {
   content: " ";
   display: block;
@@ -178,7 +183,7 @@ a {
   }
 
   &__pink {
-    background: $button_pink;
+    @include button_pink;
     border-radius: 25px;
 
     &--shadow {
@@ -232,8 +237,6 @@ a {
   }
 }
 
-
-
 //ANIMATION CHECK
 .nav__green {
   background: $color_green;
@@ -242,7 +245,8 @@ a {
   width: 0%;
   @include flex-center;
   z-index: 2;
-  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
   opacity: 0;
   cursor: pointer;
 }
@@ -276,11 +280,10 @@ a {
   width: 90%;
 }
 
-
 .animated__card:hover .nav__green {
   @include flex(row);
   width: 59px;
-  opacity: 100%;
+  opacity: 1;
 }
 
 .nav__green .background_check:hover {
@@ -299,7 +302,7 @@ a {
   border-radius: 15px;
   margin-bottom: 30px;
   width: 90%;
-  line-height: 20%;
+  line-height: 0.5;
   cursor: pointer;
   transition: width 0.2s;
   flex: 1;
@@ -339,7 +342,7 @@ a {
 
 .aligncard {
   background: $gray_menuhome_second_page;
-  padding: 20px;
+  padding: 3vw;
 
   h2 {
     padding-left: 0;
@@ -376,7 +379,7 @@ a {
 }
 
 .card__icon--:checked {
-  background: $button_pink;
+  @include button_pink;
 }
 
 //CECI EST LE FOOTER AVEC LE FOND EN NOIR AVEC LA HAUTEUR DU FOND + LES DIFFERENTS PADDING
@@ -387,7 +390,8 @@ a {
   padding-bottom: 22px;
 
   &__logo {
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
+      brightness(100%) contrast(100%);
     width: 120px;
     padding-top: 22px;
     padding-left: 24px;
@@ -413,13 +417,18 @@ footer p {
   cursor: pointer;
 }
 
-.icon__absolute {
-  position: relative;
-}
-
 .card__icon__h2 h2 {
   margin-right: 2rem;
   /* Pour ajouter un espacement entre le titre et l'icône */
+}
+
+.card__icon__h2 i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin-right: -30px;
+  cursor: pointer;
 }
 
 .icon__absolute {
@@ -437,21 +446,12 @@ footer p {
   transition: all 0.3s ease-in-out;
 }
 
-.icon__absolute input[type="checkbox"]:checked+.icon__heart {
+.icon__absolute input[type="checkbox"]:checked + .icon__heart {
   display: none;
 }
 
-.icon__absolute input[type="checkbox"]:checked~.icon__heartfull {
+.icon__absolute input[type="checkbox"]:checked ~ .icon__heartfull {
   opacity: 1;
-}
-
-.card__icon__h2 i {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  margin-right: -30px;
-  cursor: pointer;
 }
 
 .icon__heartfull {
@@ -476,6 +476,15 @@ footer p {
 
 //FORMAT DESKTOP
 @media (min-width: 768px) {
+  //GENERAL
+  .maincontainersecondpage {
+    top: 325px;
+  }
+
+  .main_body {
+    width: 75%;
+    margin: auto;
+  }
 
   //NAVBAR
   .nav__barre {
@@ -486,9 +495,14 @@ footer p {
     gap: 1.5%;
 
     .nav__item {
-      gap: 13%;
-      width: 31%;
+      width: 30%;
     }
+  }
+
+  .nav__cards {
+    @include flex(column);
+    padding-right: 10%;
+    padding-left: 10%;
   }
 
   .nav__barre__secondpage {
@@ -496,14 +510,23 @@ footer p {
     flex-wrap: wrap;
   }
 
+  .nav__item__secondpage {
+    width: 65%;
+  }
+
   .card__icon__h2 {
     justify-content: center;
-    @include flex(row)
+    @include flex(row);
   }
 
   .card {
     width: 46%;
     margin-bottom: 3%;
+  }
+
+  .cards {
+    padding-right: 10%;
+    padding-left: 10%;
   }
 
   .aligncard {
@@ -526,25 +549,8 @@ footer p {
     height: 200px;
   }
 
-  .cards {
-    padding-right: 10%;
-    padding-left: 10%;
-  }
-
   span h2 {
     padding: 0;
-  }
-
-  .nav__cards {
-    @include flex(column);
-    padding-right: 10%;
-    padding-left: 10%;
-  }
-
-  .main_body {
-    width: 75%;
-    margin: auto;
-    background-color: $gray_menuhome_second_page;
   }
 
   .footer {
@@ -565,14 +571,6 @@ footer p {
   .order__logo {
     order: 5;
     gap: 20px;
-  }
-
-  .maincontainersecondpage {
-    top: 325px;
-  }
-
-  .nav__item__secondpage {
-    width: 65%;
   }
 
   .animated__card {

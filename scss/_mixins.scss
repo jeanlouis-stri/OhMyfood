@@ -4,10 +4,13 @@
     align-items: center;
 }
 
-//DEFINIS SI CEST EN ROW OU EN COLONNE
-@mixin flex($direction)
-{
+//DEFINIS SI CEST EN LIGNE OU EN COLONNE
+@mixin flex($direction) {
     display: flex;
-    flex-direction: $direction;    
+    flex-direction: $direction;
 }
 
+//DEGRADER DE COULEUR SUR LE BOUTON
+@mixin button_pink {
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
