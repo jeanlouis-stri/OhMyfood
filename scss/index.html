@@ -38,23 +38,27 @@
   </head>
 
   <body>
+    <!--LOADER DES PAGES A L'ACTUALISATION-->
     <div class="loader">
       <div class="spinner"></div>
     </div>
 
-    <!--HEADER-->
+    <!--HEADER LOGO-->
     <header class="header header__withBackArrow">
       <div>
         <h1 class="header__logo">ohmyfood</h1>
       </div>
     </header>
 
+    <!--MAIN-->
     <main>
+      <!--LA LOCALISATION-->
       <section class="location_barre">
         <i class="fa-solid fa-location-dot location_margin"></i>
         <span class="location_weight">Paris, Belleville</span>
       </section>
 
+      <!--CENTRAGE DES ELEMENT BOUTON Y COMPRIS-->
       <section class="to-book-center">
         <h1>Réserver le menu qui vous convient</h1>
         <span class="to-book-padding"
@@ -70,31 +74,32 @@
           >
         </div>
       </section>
-      <div class="nav__cards">
+      <div class="menu__cards">
         <span>
           <h2>Fonctionnement</h2>
         </span>
 
-        <nav class="nav__barre">
-          <div class="nav__item">
-            <span class="nav__item__elipse">1</span
+        <!--DES BROCHURES AVEC DES ELLIPSES ET DES ICONES-->
+        <nav class="menu__barre">
+          <div class="menu__item">
+            <span class="menu__item__elipse">1</span
             ><i class="fa-solid fa-mobile-screen-button"></i>
             <p>Choisissez un restaurant</p>
           </div>
-          <div class="nav__item">
-            <span class="nav__item__elipse">2</span
+          <div class="menu__item">
+            <span class="menu__item__elipse">2</span
             ><i class="fa-solid fa-list"></i>
             <p>Composez le menu</p>
           </div>
-          <div class="nav__item">
-            <span class="nav__item__elipse">3</span
+          <div class="menu__item">
+            <span class="menu__item__elipse">3</span
             ><i class="fa-solid fa-store"></i>
             <p>Dégustez au restaurant</p>
           </div>
         </nav>
       </div>
 
-      <!--MENU-->
+      <!--LES MENU-->
       <div class="cards">
         <span>
           <h2>Restaurants</h2>
@@ -114,6 +119,8 @@
                 <div class="card__icon__h2">
                   <label class="icon__absolute">
                     <input type="checkbox" />
+
+                    <!--ICONE DES COEUR-->
                     <i class="fa-regular fa-heart card__icon-- icon__heart"></i>
                     <i
                       class="fa-solid fa-heart card__icon-- icon__heartfull"
@@ -199,6 +206,7 @@
       </div>
     </main>
 
+    <!--FOOTER-->
     <footer class="footer">
       <div class="order__logo">
         <img

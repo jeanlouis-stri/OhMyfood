@@ -8,22 +8,22 @@ body {
   margin: 0%;
 }
 
-.main_body {
-  border-radius: 30px 30px 0 0;
-  background: $gray_menuhome_second_page;
-}
-
-//MAINCONTAINERSECONDPAGE
-.maincontainersecondpage {
+//maincontainer__restaurantrestaurant
+.maincontainer__restaurant {
   position: absolute;
   top: 283px;
   width: 100%;
 }
 
+.main_body {
+  border-radius: 30px 30px 0 0;
+  background: $gray_menuhome_second_page;
+}
+
 .slide {
-  overflow:hidden;
-  text-overflow:ellipsis;
-  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 //POSITION DU LOADER
 .loader {
@@ -74,7 +74,7 @@ nav i:hover {
   object-fit: cover;
 }
 
-.nav_size--p {
+.menu__size--p {
   font-size: 15.04px;
 }
 
@@ -193,7 +193,7 @@ a {
   }
 }
 
-.btn__secondpage {
+.btn__restaurant {
   @include flex(column);
   align-items: center;
   padding-top: 10px;
@@ -201,13 +201,13 @@ a {
 }
 
 //NAVIGATION
-.nav__barre {
+.menu__barre {
   @include flex(column);
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
 
-  .nav__item {
+  .menu__item {
     @include flex(row);
     height: 72.38px;
     background: #f7f7f7;
@@ -238,7 +238,7 @@ a {
 }
 
 //ANIMATION CHECK
-.nav__green {
+.menu__green {
   background: $color_green;
   border-radius: 0 15px 15px 0;
   height: 72.38px;
@@ -280,22 +280,22 @@ a {
   width: 90%;
 }
 
-.animated__card:hover .nav__green {
+.animated__card:hover .menu__green {
   @include flex(row);
   width: 59px;
   opacity: 1;
 }
 
-.nav__green .background_check:hover {
+.menu__green .background_check:hover {
   animation: rotate;
 }
 
-.animated__card:hover .nav__item__secondpage {
+.animated__card:hover .menu__item__restaurant {
   width: 60%;
   border-radius: 15px 0 0 15px;
 }
 
-.nav__item__secondpage {
+.menu__item__restaurant {
   height: 72.38px;
   background: #f7f7f7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -309,19 +309,11 @@ a {
   animation: show_check 0.2s;
 }
 
-.nav__item__numberweight {
+.menu__item__numberweight {
   @include flex(row);
   font-weight: 700;
   justify-content: flex-end;
   padding-right: 16px;
-}
-
-.maincontainer p {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 15.0431px;
-  line-height: 18px;
 }
 
 //CARD
@@ -358,7 +350,7 @@ a {
   position: relative;
 
   &__title {
-    line-height: 10%;
+    line-height: 0.5;
     padding-left: 13px;
     margin-bottom: 15px;
   }
@@ -459,6 +451,7 @@ footer p {
   color: $color_animation_heart;
 }
 
+//RECTANGLE AVEC LE MOT NEWS
 .background__new {
   position: absolute;
   top: 10px;
@@ -474,10 +467,29 @@ footer p {
   z-index: 1;
 }
 
+//ANIMATION FAIT DISPARAITRE ET APPARAITRE LES MENUS
+.delay-card {
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+//DELAY ENTRE LES MENUS
+.entree-card {
+  @include fade-in-animation(0.2s);
+}
+
+.plat-card {
+  @include fade-in-animation(0.4s);
+}
+
+.dessert-card {
+  @include fade-in-animation(0.6s);
+}
+
 //FORMAT DESKTOP
 @media (min-width: 768px) {
   //GENERAL
-  .maincontainersecondpage {
+  .maincontainer__restaurant {
     top: 325px;
   }
 
@@ -487,30 +499,30 @@ footer p {
   }
 
   //NAVBAR
-  .nav__barre {
+  .menu__barre {
     @include flex(row);
     justify-content: space-between;
     align-content: center;
     flex-wrap: nowrap;
     gap: 1.5%;
 
-    .nav__item {
+    .menu__item {
       width: 30%;
     }
   }
 
-  .nav__cards {
+  .menu__cards {
     @include flex(column);
     padding-right: 10%;
     padding-left: 10%;
   }
 
-  .nav__barre__secondpage {
+  .menu__barre__restaurant {
     @include flex(column);
     flex-wrap: wrap;
   }
 
-  .nav__item__secondpage {
+  .menu__item__restaurant {
     width: 65%;
   }
 

@@ -18,7 +18,7 @@
 </head>
 
 <body>
-  <!--HEADER-->
+  <!--HEADER LOGO PLUS LE RETOUR A LA PAGE DACCUEIL-->
   <header class="header header__withBackArrow">
     <div>
       <a href="index.html"><i class="fa-arrow-left fas header__arrow"> </i>
@@ -26,16 +26,18 @@
       <h1 class="header__logo">ohmyfood</h1>
     </div>
   </header>
-
   <div>
     <img class="imghead" src="../Images et textes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" />
   </div>
 
-  <!--MAIN-->
-  <main class="maincontainersecondpage">
+  <!--MAIN QUI SE TERMINE AVANT LE BODY-->
+  <main class="maincontainer__restaurant">
+
+    <!--SARRETE AVANT LE FOOTER-->
     <div class="main_body">
-      <!--CARDMENU-->
-      <section class="nav__barre nav__barre__secondpage nav__size--p">
+
+      <!--CARDMENU-->      
+      <section class="menu__barre menu__barre__restaurant menu__size--p">
         <article class="card__icon__h2">
           <div class="icon__absolute">
             <h2 class="title__h2">A la française</h2>
@@ -46,149 +48,151 @@
             </label>
           </div>
         </article>
-        <h3 class="title__h3 title--line">ENTREES</h3>
-        
-        <div class="animated__card">
-          <div class="nav__item__secondpage nav__item__padding">
+        <h3 class="title__h3 title--line ">ENTREES</h3>
+
+        <!--DELAY DES MENUS-->
+        <div class="animated__card delay-card entree-card">
+          <!--MENU-->
+          <div class="menu__item__restaurant menu__item__padding">
             <h4>Tartare de poulpe acidulé</h4>
-            <span class="nav__item__p-align">
+            <span class="menu__item__p-align">
               <p>
-                Aux zestes d'orange<span class="nav__item__numberweight">25€</span>
+                Aux zestes d'orange<span class="menu__item__numberweight">25€</span>
               </p>
             </span>
           </div>
 
-          <div class="nav__green">
+          <!--ANIMATION SLIDE,CHECK-->
+          <div class="menu__green">
             <span class="background_check">&#x2713</span>
           </div>
         </div>
-
-        <div class="animated__card">
-          <div class="nav__item__secondpage nav__item__padding">
+        
+        <div class="animated__card delay-card entree-card">
+          <div class="menu__item__restaurant menu__item__padding">
             <h4>Velouté de légumes d'antan</h4>
-            <span class="nav__item__p-align">
+            <span class="menu__item__p-align">
               <p>
-                Carotte, panais, topinambour<span class="nav__item__numberweight">35€</span>
+                Carotte, panais, topinambour<span class="menu__item__numberweight">35€</span>
               </p>
             </span>
           </div>
 
-          <div class="nav__green">
+          <div class="menu__green">
             <span class="background_check">&#x2713</span>
           </div>
         </div>
 
-        <div class="animated__card">
-          <div class="nav__item__secondpage nav__item__padding">
+        <div class="animated__card delay-card entree-card"> 
+          <div class="menu__item__restaurant menu__item__padding">
             <h4>Soupe à l'oignon</h4>
-            <span class="nav__item__p-align">
-              <p>Revisitée<span class="nav__item__numberweight">20€</span></p>
+            <span class="menu__item__p-align">
+              <p>Revisitée<span class="menu__item__numberweight">20€</span></p>
             </span>
           </div>
 
-          <div class="nav__green">
+          <div class="menu__green">
             <span class="background_check">&#x2713</span>
           </div>
         </div>
       </section>
 
-
-
-      <section class="nav__barre nav__barre__secondpage nav_size--p">
+      <section class="menu__barre menu__barre__restaurant menu__size--p">
         <h3 class="title__h3 title--line">PLATS</h3>
 
-        <div class="animated__card">
-          <div class="nav__item__secondpage nav__item__padding">
+        <div class="animated__card delay-card plat-card">
+          <div class="menu__item__restaurant menu__item__padding">
             <h4>Coquilles Saint-Jacques</h4>
-            <span class="nav__item__p-align">
+            <span class="menu__item__p-align">
               <p>
-                Accompagnées d'une purée de panais<span class="nav__item__numberweight">40€</span>
+                Accompagnées d'une purée de panais<span class="menu__item__numberweight">40€</span>
               </p>
             </span>
           </div>
 
-          <div class="nav__green">
+          <div class="menu__green">
             <span class="background_check">&#x2713</span>
           </div>
         </div>
 
-        <div class="animated__card">
-          <div class="nav__item__secondpage nav__item__padding">
+        <div class="animated__card delay-card plat-card">
+          <div class="menu__item__restaurant menu__item__padding">
             <h4>Magret de canard</h4>
-            <span class="nav__item__p-align">
+            <span class="menu__item__p-align">
               <p>
-                Et parmentier de pommes de terre<span class="nav__item__numberweight">35€</span>
+                Et parmentier de pommes de terre<span class="menu__item__numberweight">35€</span>
               </p>
             </span>
           </div>
 
-          <div class="nav__green">
+          <div class="menu__green">
             <span class="background_check">&#x2713</span>
           </div>
         </div>
 
-        <div class="animated__card">
-          <div class="nav__item__secondpage nav__item__padding">
+        <div class="animated__card delay-card plat-card">
+          <div class="menu__item__restaurant menu__item__padding">
             <h4>Pigeonneau d’Ille-et-Vilaine</h4>
-            <span class="nav__item__p-align">
+            <span class="menu__item__p-align">
               <p>
-                Sur son lit de gnocchis aux légumes<span class="nav__item__numberweight">44€</span>
+                Sur son lit de gnocchis aux légumes<span class="menu__item__numberweight">44€</span>
               </p>
             </span>
           </div>
 
-          <div class="nav__green">
+          <div class="menu__green">
             <span class="background_check">&#x2713</span>
           </div>
         </div>
       </section>
 
-      <section class="nav__barre nav__barre__secondpage nav_size--p">
+      <section class="menu__barre menu__barre__restaurant menu__size--p">
         <h3 class="title__h3 title--line">DESSERTS</h3>
 
-        <div class="animated__card">
-          <div class="nav__item__secondpage nav__item__padding">
+        <div class="animated__card delay-card dessert-card">
+          <div class="menu__item__restaurant menu__item__padding">
             <h4>Pétales de violettes glacés</h4>
-            <span class="nav__item__p-align">
+            <span class="menu__item__p-align">
               <p>
-                Et purée de noisettes<span class="nav__item__numberweight">18€</span>
+                Et purée de noisettes<span class="menu__item__numberweight">18€</span>
               </p>
             </span>
           </div>
-          <div class="nav__green">
+          <div class="menu__green">
             <span class="background_check">&#x2713</span>
           </div>
         </div>
 
-        <div class="animated__card">
-          <div class="nav__item__secondpage nav__item__padding">
+        <div class="animated__card delay-card dessert-card">
+          <div class="menu__item__restaurant menu__item__padding">
             <h4>Fondant au chocolat</h4>
-            <span class="nav__item__p-align">
-              <p>Revisitée<span class="nav__item__numberweight">22€</span></p>
+            <span class="menu__item__p-align">
+              <p>Revisitée<span class="menu__item__numberweight">22€</span></p>
             </span>
           </div>
-          <div class="nav__green">
+          <div class="menu__green">
             <span class="background_check">&#x2713</span>
           </div>
         </div>
 
-        <div class="animated__card">
-          <div class="nav__item__secondpage nav__item__padding">
+        <div class="animated__card delay-card dessert-card">
+          <div class="menu__item__restaurant menu__item__padding">
             <h4>Millefeuille croustillant</h4>
-            <span class="nav__item__p-align">
+            <span class="menu__item__p-align">
               <p>
-                Myrtilles et pâte d’amande<span class="nav__item__numberweight">23€</span>
+                Myrtilles et pâte d’amande<span class="menu__item__numberweight">23€</span>
               </p>
             </span>
           </div>
 
-          <div class="nav__green">
+          <div class="menu__green">
             <span class="background_check">&#x2713</span>
           </div>
         </div>
-
       </section>
-      <section class="btn__secondpage">
+
+      <!--BOUTON-->
+      <section class="btn__restaurant">
         <div>
           <a href="#"><button class="btn btn__pink btn__pink--shadow">
               Commander
@@ -199,6 +203,7 @@
     </div>
     <div>
 
+      <!--FOOTER-->
       <footer class="footer">
         <div class="order__logo">
           <img class="footer__logo" src="../Images et textes Ohmyfood/images/logo/ohmyfood.png" alt="Logoohmyfood" />
@@ -217,5 +222,4 @@
     </div>
   </main>
 </body>
-
 </html>
