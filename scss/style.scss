@@ -303,18 +303,36 @@ a {
   border-radius: 15px;
   margin-bottom: 30px;
   width: 90%;
-  line-height: 0.5;
+  line-height: 1.5;
   cursor: pointer;
   transition: width 0.2s;
   flex: 1;
-  animation: show_check 0.2s;
+  animation: show_check 0.2s;  
 }
+
+.menu__item__restaurant h4 {
+  margin: 0.5em 0;
+}
+
+.menu__item__restaurant span {
+  @include flex(row);
+  align-items: center;
+  justify-content: space-between;
+}
+
 
 .menu__item__numberweight {
   @include flex(row);
   font-weight: 700;
   justify-content: flex-end;
   padding-right: 16px;
+}
+
+.text_overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0 0.5em 0 0;
 }
 
 //CARD
