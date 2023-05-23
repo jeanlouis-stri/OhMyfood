@@ -46,10 +46,9 @@ body {
   background: #f7f7f7;
 }
 
-.slide {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.restaurant__name {
+  padding-left: 20px;
+  padding-top: 1px;
 }
 
 .loader {
