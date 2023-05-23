@@ -420,12 +420,16 @@ a {
   }
 
   &__icon-- i {
-    font-size: 12px;
+    font-size: 12px;    
   }
 }
 
 footer p {
   cursor: pointer;
+}
+
+footer a {
+  color: $color_white;
 }
 
 .card__icon__h2 h2 {
