@@ -28,4 +28,4 @@ Installation
 Clonez ce dépôt de projet sur votre machine locale.
 Ouvrez le fichier index.html dans votre navigateur web.
 Aperçu du site
-Vous pouvez visualiser le site en ligne à l'adresse suivante : [http://127.0.0.1:5500/scss/menualafran%C3%A7aise.html]
+Vous pouvez visualiser le site en ligne à l'adresse suivante : [http://127.0.0.1:5500/html/index.html]
